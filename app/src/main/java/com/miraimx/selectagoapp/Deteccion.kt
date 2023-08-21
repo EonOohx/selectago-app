@@ -14,7 +14,6 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -23,14 +22,9 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.FullScreenContentCallback
-import com.google.android.gms.ads.LoadAdError
 import com.miraimx.selectagoapp.ObjectDetectorHelper.DetectorListener
 import org.tensorflow.lite.task.vision.detector.Detection
 import kotlinx.coroutines.*
-import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 class Deteccion : AppCompatActivity() {
 
@@ -49,8 +43,7 @@ class Deteccion : AppCompatActivity() {
     var promedio: Int? = null
     var estimacion: Int? = null
     var cantidad: Int? = null
-    private var mInterstitialAd: InterstitialAd? = null
-    private final var TAG = "Deteccion"
+
 
     // Variables para almacenar la categoría y el puntaje del objeto detectado
     var imagenSeleccionada: Int = 1
@@ -58,20 +51,6 @@ class Deteccion : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_deteccion)
-
-        var adRequest = AdRequest.Builder().build()
-
-        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest, object : InterstitialAdLoadCallback() {
-            override fun onAdFailedToLoad(adError: LoadAdError) {
-                adError.toString().let { Log.d(TAG, it) }
-                mInterstitialAd = null
-            }
-
-            override fun onAdLoaded(interstitialAd: InterstitialAd) {
-                Log.d(TAG, "Ad was loaded.")
-                mInterstitialAd = interstitialAd
-            }
-        })
 
         val actionBar: ActionBar? = supportActionBar
         if (actionBar != null) {
@@ -330,11 +309,6 @@ class Deteccion : AppCompatActivity() {
     fun fnSiguiente(view: View) {
 
         if (cantidad!=null){
-            if (mInterstitialAd != null) {
-                mInterstitialAd?.show(this)
-            } else {
-                Log.d("TAG", "The interstitial ad wasn't ready yet.")
-            }
             //Botón para avanzar el contador
             detecciones += cantidad!!
             cantidad = null
@@ -372,7 +346,6 @@ class Deteccion : AppCompatActivity() {
         }
 
     }
-
 
 }
 

@@ -81,4 +81,5 @@ class Detectar : Fragment() {
         }
 
     }
+
 }
