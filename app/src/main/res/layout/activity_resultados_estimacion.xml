@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="5dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:context="com.miraimx.selectagoapp.ResultadosEstimacion">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Resultados de estimación"
+            android:textSize="30dp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/txtTipoFruto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:text="Tipo de fruto: "
+            android:textSize="25dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:text="Estimación de producción: "
+            android:textSize="25dp"
+            />
+
+        <TextView
+            android:id="@+id/txtEstimacionProduccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginHorizontal="30dp"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:text="Valor de producción: "
+            android:textSize="25dp"
+            />
+
+        <TextView
+            android:id="@+id/txtValorProduccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginHorizontal="30dp"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            />
+
+        <TextView
+            android:id="@+id/txtRecolectoresNecesarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:text="Recolectores necesarios: "
+            android:textSize="25dp"
+            />
+
+        <TextView
+            android:id="@+id/txtNumeroCostales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:text="Número de costales: "
+            android:textSize="25dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:text="Transporte: "
+            android:textSize="25dp"
+            />
+        <TextView
+            android:id="@+id/txtNumeroTransportes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginHorizontal="30dp"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            />
+
+        <Button
+            android:id="@+id/btnAceptarResultadosEstimacion"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/verde"
+            android:layout_gravity="center"
+            android:text="Aceptar"
+            android:layout_marginTop="30dp"
+            android:onClick="salirEstimacion"
+            />
+    </LinearLayout>
+</ScrollView>

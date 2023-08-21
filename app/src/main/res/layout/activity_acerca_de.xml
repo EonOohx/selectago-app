@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.miraimx.selectagoapp.AcercaDe">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acerca De"
+        android:layout_gravity="center"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_margin="15sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logocuadrado"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="20dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SelectagoApp"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Versión 1.0.0"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contacto"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/correo"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="marca.selectago23@gmail.com"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        >
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/facebook"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selectago"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:onClick="fnFacebook"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        >
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/instagram"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selectago.01"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            />
+            <!--android:onClick="fnInstagram" -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        >
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/telefono"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9614691395"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:gravity="bottom"
+        android:text="SelectagoApp\n©2023 Selectago. Todos los derechos reservados"
+        />
+
+</LinearLayout>

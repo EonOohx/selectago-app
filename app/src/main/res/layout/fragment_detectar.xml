@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Detectar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtConfMuestra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/configuracionDeteccion"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            tools:layout_editor_absoluteX="147dp"
+            tools:layout_editor_absoluteY="145dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tipoFruto"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <Spinner
+            android:id="@+id/opcionFrutas"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <TextView
+            android:id="@+id/txtCantArbol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cantidadArboles"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <EditText
+            android:id="@+id/intCantArbol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="@color/verde"
+            tools:ignore="LabelFor"
+            />
+
+        <Button
+            android:id="@+id/btnAceptarConfMu"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:text="@string/aceptar"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            />
+    </LinearLayout>
+</ScrollView>

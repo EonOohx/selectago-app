@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">SelectagoApp</string>
+
+    <string name="instrucciones_uso">Instrucciones de uso de Selectago app:
+Para usar esta aplicación es necesario que cuente con un dispositivo con cámara.
+En el menú de opciones podrá ver las funciones principales de la aplicación.
+En la opción "Tomar muestras" podrá realizar un muestreo de sus frutos utilizando la cámara del dispositivo.
+Al seleccionar esa opción, se le pedirán algunos datos necesarios para realizar el muestreo, como el tipo de fruto que va a contar, qué tan preciso desea que sea el análisis y la cantidad de árboles en total que tiene en sus cultivos, una vez ingresados los datos debe presionar el botón aceptar para iniciar el análisis y detección.
+El sistema calculará de manera automática la cantidad necesaria de árboles para hacer el muestreo, y usted deberá escoger esa cantidad de árboles entre su cultivo de forma aleatoria y procurando utilizar árboles de cada área de su cultivo para tener resultados más precisos.
+En la parte superior se le indicará la cantidad de árboles que se van a detectar, y en la parte central de la pantalla podrá ver la imagen de la cámara. Para tomar una fotografía del árbol y detectar los frutos en él deberá presionar el botón "Siguiente", si quiere volver a hacer la fotografía anterior puede usar el botón "Anterio", en cambio, si desea cancelar el proceso y regresar a la pantalla del menú principal puede usar el botón "Cancelar".
+Una vez que todos los árboles han sido fotografiados, la aplicación mostrará los resultados en la pantalla indicando el número total de árboles del cultivo, la cantidad de árboles detectados, la cantidad de frutos detectados, el promedio de frutos por cada árbol y al final la cantidad aproximada de frutos en total del cultivo.
+El botón "Aceptar" guardará esos datos y regresará al menú principal, y el botón "Cancelar" volverá al menú principal sin guardar los datos.
+En la opción de "Consultar datos" usted podrá consultar los registros de detecciones realizadas anteriormente, seleccionando el tipo de frutos y el intervalo de fechas que desea consultar, una vez seleccionados debe presionar el botón "Consultar" para realizar la consulta y en la parte inferior se mostrará una gráfica que muestra la cantidad de frutos detectados en función del tiempo, y después una lista con los registros existentes, en la cual podrá arrastrar un registro hacia la izquierda para eliminarlo.
+En la opción de "Realizar estimación" usted podrá realizar una estimación de los recursos necesarios para la recolección de sus frutos. Deberá ingresar el tipo de fruto y el precio de venta por tonelada para poder estimar el valor de su producción, además de los días límite que tiene para cosechar dichos frutos, esto servirá para indicarle la cantidad de mano de obra que necesita para cumplir con el plazo establecido.
+Una vez ingresados los datos y presionado el botón "Aceptar" se le mostrarán los siguientes datos: Tipo de fruto (El tipo de frutos qur tiene en su cosecha), Estimación de producción (Cantidad aproximada de frutos en su cosecha), Valor de producción (Precio al que podrá vender dichos frutos), Recolectores necesarios (Mano de obra necesaria para recolectar los frutos a tiempo), Número de costales(Cantidad de costales necesarios para almacenar los frutos) y Número de transportes (Medios de transporte necesarios para transportar los frutos que venderá). El botón "Aceptar" lo regresará al menú principal.
+</string>
+
+    <string name="alt_bottom_sheet_chevron">Bottom sheet expandable indicator</string>
+
+    <string name="alt_bottom_sheet_max_results_button_minus">Decreasing maxium detected results
+        button</string>
+    <string name="alt_bottom_sheet_max_results_button_plus">Increasing maxium detected results
+        button</string>
+    <string name="alt_bottom_sheet_threshold_button_minus">Decreasing threshold of detected object
+        results button</string>
+    <string name="alt_bottom_sheet_threshold_button_plus">Increasing threshold of detected object
+        results button</string>
+    <string name="alt_bottom_sheet_thread_button_minus">Decrease the number of threads used</string>
+    <string name="alt_bottom_sheet_thread_button_plus">Increase the number of threads used</string>
+
+    <string name="label_interence_time">Inference Time</string>
+    <string name="label_fps">Frames per Second</string>
+    <string name="label_confidence_threshold">Threshold</string>
+    <string name="label_max_results">Max Results</string>
+    <string name="label_threads">Number of Threads</string>
+    <string name="label_delegate">Delegate</string>
+    <string name="label_models">ML Model</string>
+    <string name="configuracionDeteccion">Configuración de Detección</string>
+    <string name="tipoFruto">Tipo de fruto</string>
+    <string name="cantidadArboles">Cantidad de árboles</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="tuproduccion">Tu producción</string>
+    <string name="logomain">logoMain</string>
+    <string name="ver_mas">Ver mas</string>
+
+    <string-array name="delegate_spinner_titles">
+        <item>CPU</item>
+        <item>GPU</item>
+        <item>NNAPI</item>
+    </string-array>
+
+    <string-array name="models_spinner_titles">
+        <item>MobileNet V1</item>
+        <item>EfficientDet Lite0</item>
+        <item>EfficientDet Lite1</item>
+        <item>EfficientDet Lite2</item>
+    </string-array>
+
+</resources>

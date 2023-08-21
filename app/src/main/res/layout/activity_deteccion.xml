@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.miraimx.selectagoapp.Deteccion">
+
+    <TextView
+        android:id="@+id/labelArboles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Árbol 0/0"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:onClick="fnCambiarImagen"
+        />
+
+    <Button
+        android:id="@+id/select_btn"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="Tomar foto"
+        android:onClick="fnTomarFoto"
+        />
+
+    <Button
+        android:id="@+id/btnDetectar"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="Detectar"
+        android:onClick="fnDetectar"
+        />
+
+    <Button
+        android:id="@+id/btnSiguiente"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="Siguiente"
+        android:onClick="fnSiguiente"
+        />
+
+</LinearLayout>

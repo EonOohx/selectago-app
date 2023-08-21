@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/barn"
+        android:title="Inicio"  />
+
+    <item
+        android:id="@+id/navigation_detectar"
+        android:icon="@drawable/find"
+        android:title="Detectar" />
+
+    <item
+        android:id="@+id/navigation_estimar"
+        android:icon="@drawable/caja"
+        android:title="Estimar" />
+</menu>

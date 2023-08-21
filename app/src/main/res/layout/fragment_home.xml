@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Home">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <!-- TODO: Update blank fragment layout -->
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/logocuadrado"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/logomain" />
+
+        <Spinner
+            android:id="@+id/spnMainFruto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tuproduccion"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="265dp"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <Button
+            android:id="@+id/btnVerMas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ver_mas"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:backgroundTint="#0000"
+            android:layout_gravity="right"
+            android:layout_marginTop="260dp"
+            android:layout_marginHorizontal="20dp"
+            style="?android:attr/borderlessButtonStyle"
+            tools:ignore="RtlHardcoded" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/cMainProduccion"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="310dp"
+            android:layout_marginHorizontal="20dp"
+            />
+    </FrameLayout>
+</ScrollView>
