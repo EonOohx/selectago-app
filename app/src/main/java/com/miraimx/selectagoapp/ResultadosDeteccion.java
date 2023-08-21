@@ -20,7 +20,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.LoadAdError;
-import com.miraimx.selectagoapp.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -41,7 +40,7 @@ public class ResultadosDeteccion extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         AdRequest adRequest = new AdRequest.Builder().build();
 
-        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest,
+        InterstitialAd.load(this,"ca-app-pub-1183027072386754/9938389254", adRequest,
                 new InterstitialAdLoadCallback() {
                     @Override
                     public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
