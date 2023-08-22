@@ -17,7 +17,7 @@ import kotlin.math.ceil
 import kotlin.math.roundToInt
 
 class Estimar : Fragment() {
-    val frutos = arrayOf("Limon", "Mango", "Jitomate", "Mandarina")
+    val frutos = arrayOf("Limon")
     private val transporte = Array(4) { arrayOf("", "") }
     private lateinit var txtPrecioVenta: EditText
     private lateinit var txtDia: EditText

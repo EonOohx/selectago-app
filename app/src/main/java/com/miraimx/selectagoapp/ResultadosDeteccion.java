@@ -2,10 +2,7 @@ package com.miraimx.selectagoapp;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
@@ -18,14 +15,19 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+
 public class ResultadosDeteccion extends AppCompatActivity {
 
     TextView txtArboles, txtMuestra, txtDetectados, txtPromedio, txtEstimacion;
@@ -33,6 +35,7 @@ public class ResultadosDeteccion extends AppCompatActivity {
     private int arboles, muestra, detecciones, promedio, estimacion;
     //private String fechaConf;
     private InterstitialAd mInterstitialAd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,25 +43,7 @@ public class ResultadosDeteccion extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         AdRequest adRequest = new AdRequest.Builder().build();
 
-        InterstitialAd.load(this,"ca-app-pub-1183027072386754/9938389254", adRequest,
-                new InterstitialAdLoadCallback() {
-                    @Override
-                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                        // The mInterstitialAd reference will be null until
-                        // an ad is loaded.
-                        mInterstitialAd = interstitialAd;
-                        Log.i(TAG, "onAdLoaded");
-                    }
-
-                    @Override
-                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        // Handle the error
-                        Log.d(TAG, loadAdError.toString());
-                        mInterstitialAd = null;
-                    }
-                });
-
-
+        anuncio(adRequest);
 
         if (actionBar != null) {
             //Poner el ícono al ActionBar
@@ -84,24 +69,45 @@ public class ResultadosDeteccion extends AppCompatActivity {
         mostrarDeteccion();
     }
 
-    private void mostrarDeteccion(){
-        txtArboles.setText("Número de árboles: "+arboles);
-        txtMuestra.setText("Árboles muestreados: "+muestra);
-        txtDetectados.setText("Frutos Detectados: "+detecciones);
-        txtPromedio.setText("Promedio por árbol: "+promedio);
-        txtEstimacion.setText(estimacion+" frutos");
+    private void anuncio(AdRequest adRequest) {
+        InterstitialAd.load(this, "ca-app-pub-1183027072386754/9938389254", adRequest,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        // The mInterstitialAd reference will be null until
+                        // an ad is loaded.
+                        mInterstitialAd = interstitialAd;
+                        Log.i(TAG, "onAdLoaded");
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        // Handle the error
+                        Log.d(TAG, loadAdError.toString());
+                        mInterstitialAd = null;
+                    }
+                });
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void mostrarDeteccion() {
+        txtArboles.setText("Número de árboles: " + arboles);
+        txtMuestra.setText("Árboles muestreados: " + muestra);
+        txtDetectados.setText("Frutos Detectados: " + detecciones);
+        txtPromedio.setText("Promedio por árbol: " + promedio);
+        txtEstimacion.setText(estimacion + " frutos");
     }
 
     public void insertarDatosDeteccion(View view) {
-        try (SQLiteHelperKotlin miBaseDeDatos = new SQLiteHelperKotlin(this)){
-        SQLiteDatabase db = miBaseDeDatos.getWritableDatabase();
-        SQLiteDatabase consulta = miBaseDeDatos.getReadableDatabase();
-        String fecha = fechasFormatos();
-        String [] selectionArgs = {fruto, fecha};
-        String query = "select fecha from detecciones WHERE fruto = ? AND fecha = ? ";
-        Cursor cursor = consulta.rawQuery(query, selectionArgs);
-        int num_registros = cursor.getCount();
-        ContentValues valores = new ContentValues();
+        try (SQLiteHelperKotlin miBaseDeDatos = new SQLiteHelperKotlin(this)) {
+            SQLiteDatabase db = miBaseDeDatos.getWritableDatabase();
+            SQLiteDatabase consulta = miBaseDeDatos.getReadableDatabase();
+            String fecha = fechasFormatos();
+            String[] selectionArgs = {fruto, fecha};
+            String query = "select fecha from detecciones WHERE fruto = ? AND fecha = ? ";
+            @SuppressLint("Recycle") Cursor cursor = consulta.rawQuery(query, selectionArgs);
+            int num_registros = cursor.getCount();
+            ContentValues valores = new ContentValues();
             if (num_registros == 0) {
                 // Insertar datos en la tabla
                 valores.put("fruto", fruto);
@@ -109,24 +115,24 @@ public class ResultadosDeteccion extends AppCompatActivity {
                 valores.put("cantidad_arbol", arboles);
                 valores.put("cantidad_parcela", estimacion);
                 db.insert("detecciones", null, valores);
-            }else{
+            } else {
                 valores.put("cantidad_arbol", arboles);
                 valores.put("cantidad_parcela", estimacion);
-                String [] args = new String [] {fruto, fecha};
-                db.update("detecciones", valores, "fruto=? AND fecha=?",args);
+                String[] args = new String[]{fruto, fecha};
+                db.update("detecciones", valores, "fruto=? AND fecha=?", args);
             }
             consulta.close();
             db.close();
             Toast.makeText(this, "Resultados guardados", Toast.LENGTH_SHORT).show();
-        }catch(Exception ignored){
+        } catch (Exception ignored) {
             Toast.makeText(this, "No se pudieron guardar los resultados", Toast.LENGTH_SHORT).show();
-        }finally {
+        } finally {
             salirDatos(view);
 
         }
     }
 
-    private String fechasFormatos(){
+    private String fechasFormatos() {
 
         // Obtener la fecha actual
         Date currentDate = new Date();

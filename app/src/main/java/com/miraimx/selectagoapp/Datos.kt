@@ -2,6 +2,7 @@ package com.miraimx.selectagoapp
 
 import android.content.Context
 import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Build
 import android.view.View
 import android.widget.AdapterView
@@ -24,7 +25,7 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 class Datos constructor(private val contexto:Context, private val lineChart: LineChart) {
-    private val frutos = arrayOf("Limon", "Mango", "Jitomate", "Mandarina")
+    private val frutos = arrayOf("Limon")
     private val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
     @RequiresApi(Build.VERSION_CODES.O)
     val dateFormatter: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
@@ -54,21 +55,6 @@ class Datos constructor(private val contexto:Context, private val lineChart: Lin
                 }
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
-            }
-        }
-    }
-
-    private fun obtenerDatos(fechas: ArrayList<String>, produccion: ArrayList<String>) {
-        /* Los registros al ser consultados de Descendente se necesitan almacenar
-        de forma Ascendente para evitar el error de lectura. */
-        entradaLinea.clear()
-        for (i in 1 until fechas.size + 1) {
-            try {
-                val fecha = dateFormat.parse(fechas[fechas.size - i])
-                val valor = produccion[fechas.size - i].toDouble()
-                entradaLinea.add(Entry(fecha!!.time.toFloat(), valor.toFloat()))
-            } catch (e: Exception) {
-                e.printStackTrace()
             }
         }
     }
@@ -106,9 +92,24 @@ class Datos constructor(private val contexto:Context, private val lineChart: Lin
         }
     }
 
+    private fun normalizaDatos(fechas: ArrayList<String>, produccion: ArrayList<String>) {
+        /* Los registros al ser consultados de Descendente se necesitan almacenar
+        de forma Ascendente para evitar el error de lectura. */
+        entradaLinea.clear()
+        for (i in 1 until fechas.size + 1) {
+            try {
+                val fecha = dateFormat.parse(fechas[fechas.size - i])
+                val valor = produccion[fechas.size - i].toDouble()
+                entradaLinea.add(Entry(fecha!!.time.toFloat(), valor.toFloat()))
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
     private fun confGrafica(fechas: ArrayList<String>, produccion: ArrayList<String>) {
         val xAxis = lineChart.xAxis
-        obtenerDatos(fechas, produccion)
+        normalizaDatos(fechas, produccion)
 
         val numRegistros = entradaLinea.size
 
@@ -131,7 +132,13 @@ class Datos constructor(private val contexto:Context, private val lineChart: Lin
         dataset.color = ColorTemplate.JOYFUL_COLORS[3]
         dataset.valueTextColor = Color.BLACK
         dataset.valueTextSize = 18f
+        lineChart.setNoDataText("Sin detecciones frutales")
+        lineChart.setNoDataTextTypeface(Typeface.DEFAULT_BOLD)
         lineChart.setTouchEnabled(false)
         lineChart.invalidate()
+        if (fechas.isEmpty() && produccion.isEmpty()){
+            lineChart.clear()
+        }
+
     }
 }

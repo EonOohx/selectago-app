@@ -17,7 +17,7 @@ import kotlin.math.pow
 
 
 class Detectar : Fragment() {
-    private val frutos = arrayOf("Limon", "Mango", "Jitomate", "Mandarina")
+    private val frutos = arrayOf("Limon")
     private lateinit var cantidadArboles: EditText
     private var tipoFruta: String? = null
 

@@ -30,6 +30,7 @@ class Home : Fragment() {
         val spnFruto:Spinner = view.findViewById(R.id.spnMainFruto)
         val btnVerMas: Button = view.findViewById(R.id.btnVerMas)
         val grafica:LineChart = view.findViewById(R.id.cMainProduccion)
+        // Instancia a clase Datos
         val datos = activity?.let { Datos(it, grafica) }
         datos?.confArrayAdapter(spnFruto)
         btnVerMas.setOnClickListener { startActivity(Intent(activity, Consulta::class.java)) }

@@ -32,7 +32,7 @@ import java.util.Date
 import java.util.Locale
 
 class Consulta : AppCompatActivity() {
-    val frutos = arrayOf("Limon", "Mango", "Jitomate", "Mandarina")
+    val frutos = arrayOf("Limon")
     private var tipoFruta: String = ""
     private var fDesde: String = ""
     private var fHasta: String = ""
@@ -112,7 +112,7 @@ class Consulta : AppCompatActivity() {
         val header2 = TextView(this)
         header2.text = "Producción"
         header2.textAlignment = View.TEXT_ALIGNMENT_CENTER
-        header2.setTextSize(20f)
+        header2.textSize = 20f
         header2.setTypeface(null, Typeface.BOLD)
         header2.setBackgroundColor(Color.parseColor("#a2d001"))
         header2.setPadding(20, 20, 20, 20)

@@ -42,6 +42,8 @@ Una vez ingresados los datos y presionado el botón "Aceptar" se le mostrarán l
     <string name="tuproduccion">Tu producción</string>
     <string name="logomain">logoMain</string>
     <string name="ver_mas">Ver mas</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="nosotros">Nosotros</string>
 
     <string-array name="delegate_spinner_titles">
         <item>CPU</item>
