@@ -3,6 +3,7 @@ package com.miraimx.selectagoapp;
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
@@ -16,11 +17,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.OnPaidEventListener;
+import com.google.android.gms.ads.ResponseInfo;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
@@ -41,6 +48,9 @@ public class ResultadosDeteccion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultados_deteccion);
         ActionBar actionBar = getSupportActionBar();
+
+        MobileAds.initialize(this);
+      
         AdRequest adRequest = new AdRequest.Builder().build();
 
         anuncio(adRequest);
@@ -77,6 +87,33 @@ public class ResultadosDeteccion extends AppCompatActivity {
                         // The mInterstitialAd reference will be null until
                         // an ad is loaded.
                         mInterstitialAd = interstitialAd;
+                        mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                            @Override
+                            public void onAdClicked() {
+                                super.onAdClicked();
+                            }
+
+                            @Override
+                            public void onAdDismissedFullScreenContent() {
+                                super.onAdDismissedFullScreenContent();
+                            }
+
+                            @Override
+                            public void onAdFailedToShowFullScreenContent(@NonNull AdError adError) {
+                                super.onAdFailedToShowFullScreenContent(adError);
+                            }
+
+                            @Override
+                            public void onAdImpression() {
+                                super.onAdImpression();
+                            }
+
+                            @Override
+                            public void onAdShowedFullScreenContent() {
+                                super.onAdShowedFullScreenContent();
+                                mInterstitialAd = null;
+                            }
+                        });
                         Log.i(TAG, "onAdLoaded");
                     }
 
@@ -84,7 +121,7 @@ public class ResultadosDeteccion extends AppCompatActivity {
                     public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
                         // Handle the error
                         Log.d(TAG, loadAdError.toString());
-                        mInterstitialAd = null;
+                        //mInterstitialAd = null;
                     }
                 });
     }
@@ -160,7 +197,7 @@ public class ResultadosDeteccion extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         if (mInterstitialAd != null) {
-            mInterstitialAd.show(this);
+            mInterstitialAd.show(ResultadosDeteccion.this);
         } else {
             Log.d("TAG", "The interstitial ad wasn't ready yet.");
         }
