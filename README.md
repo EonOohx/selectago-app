@@ -6,7 +6,9 @@
 SelectagoApp es una aplicación móvil diseñada para ayudar a los agricultores a reducir pérdidas en la cosecha mediante la identificación y clasificación de frutas utilizando un modelo de inteligencia artificial. 
 La aplicación permite escanear frutas como mango, rambután y limón para evaluar su calidad y gestionar eficientemente los recursos agrarios.  
 
-![Animación](assets/selectago_app_prevw.gif)
+<center>
+  ![Animación](assets/selectago_app_prevw.gif)
+</center>
 
 ---
 
