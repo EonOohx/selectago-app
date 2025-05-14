@@ -20,9 +20,11 @@ La aplicación permite escanear frutas como mango, rambután y limón para evalu
 ---
 
 ## 🛠️ Tecnologías Utilizadas  
-- **Android Studio** (Desarrollo de la app)  
-- **Kotlin 1.8 & Java 8** (Lenguajes de programación)  
-- **TensorFlow Lite 2.9** (Modelo de IA para clasificación de frutas)  
-- **SQLite 3.32.2** (Base de datos local)  
-- **Google AdMob 22.2.0** (Publicidad en la app)  
-- **Python 3.10, TensorFlow 2.13, Roboflow** (Entrenamiento de la red neuronal) 
+| Categoría                        | Tecnologías/Versiones                                          |
+|----------------------------------|----------------------------------------------------------------|
+| IDE de desarrollo                | Android Studio                                                 |
+| Lenguajes de programación        | Kotlin 1.8, Java 8                                             |
+| Modelo de IA en la app           | TensorFlow Lite 2.9                                            |
+| Base de datos local              | SQLite 3.32.2                                                  |
+| Monetización                     | Google AdMob 22.2.0                                            |
+| Entrenamiento del modelo IA      | Python 3.10, TensorFlow 2.13, Roboflow   
