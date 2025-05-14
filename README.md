@@ -1,4 +1,6 @@
-# 📱 SelectagoApp  
+# 📱 SelectagoApp
+![Inicio del proyecto](https://img.shields.io/badge/Inicio-Julio%202025-blue)
+![Finalización del proyecto](https://img.shields.io/badge/Finalizado-Septiembre%202025-green)
 
 ### Aplicación para la reducción de mermas frutícolas y gestión de recursos agrarios mediante IA 🍎🍋  
 
