@@ -28,3 +28,16 @@ La aplicación permite escanear frutas como mango, rambután y limón para evalu
 | Base de datos local              | SQLite 3.32.2                                                  |
 | Monetización                     | Google AdMob 22.2.0                                            |
 | Entrenamiento del modelo IA      | Python 3.10, TensorFlow 2.13, Roboflow   
+
+### Procedimiento
+1. Descarga el archivo `.apk` del siguiente enlance :
+[mituxtlaapp-v1.0.apk](https://github.com/EonOohx/selectago-app/releases/download/v1.0.0/selectago-release.apk)
+2. Ábrelo en tu dispositivo Android y acepta los permisos de instalación de fuentes externas
+3. ¡Listo!
+
+
+## 📬 Contacto
+
+Si deseas dejar comentarios, sugerencias o contactarme:
+
+📧 Correo: [RaulAlejandro_RodriguezR@hotmail.com]
