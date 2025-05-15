@@ -31,9 +31,9 @@ La aplicación permite escanear frutas como mango, rambután y limón para evalu
 
 ### Procedimiento
 1. Descarga el archivo `.apk` del siguiente enlance :
-[mituxtlaapp-v1.0.apk](https://github.com/EonOohx/selectago-app/releases/download/v1.0.0/selectago-release.apk)
-2. Ábrelo en tu dispositivo Android y acepta los permisos de instalación de fuentes externas
-3. ¡Listo!
+[selectagoapp-v1.0.apk](https://github.com/EonOohx/selectago-app/releases/download/v1.0.0/selectago-release.apk)
+3. Ábrelo en tu dispositivo Android y acepta los permisos de instalación de fuentes externas
+4. ¡Listo!
 
 
 ## 📬 Contacto
