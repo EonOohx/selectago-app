@@ -4,32 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context="com.miraimx.selectagoapp.Ayuda">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp"
+        android:text="Instrucciones de uso"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ver videos tutoriales"
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:onClick="fnVerVideosTutoriales"
-        />
+        android:text="Ver videos tutoriales" />
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
-        <TextView
+        android:padding="10dp">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textSize="15dp"
-            android:textColor="@color/black"
-            android:textStyle="italic"
-            android:text="@string/instrucciones_uso"
-            />
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/descripcion_requisitos"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:text="@string/descripcion_menu_principal"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/descripcion_tomar_muestras"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:paddingBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/descripcion_consultar_datos"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:paddingBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/descripcion_realizar_estimacion"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:paddingBottom="12dp" />
+        </LinearLayout>
+
     </ScrollView>
 
 </LinearLayout>

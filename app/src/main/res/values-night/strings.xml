@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="descripcion_consultar_datos">\n• Consultar datos:\n1. Seleccione tipo de fruto e intervalo de fechas.\n2. Presione \'Consultar\'.\n3. Verá una gráfica y una lista de registros.\nPuede eliminar registros deslizando hacia la izquierda.</string>
+    <string name="descripcion_realizar_estimacion">\n• Realizar estimación:\n1. Ingrese tipo de fruto, precio por tonelada y días para cosechar.\n2. Presione \'Aceptar\' para ver:\n- Tipo de fruto\n- Producción estimada\n- Valor de producción\n- Mano de obra necesaria\n- Costales y transportes requeridos\n\nPresione \'Aceptar\' para volver al menú.</string>
+    <string name="descripcion_requisitos">• Requisitos:\nPara usar esta aplicación necesita un dispositivo con cámara.</string>
+    <string name="descripcion_tomar_muestras">\n• Tomar muestras:\n1. Ingrese el tipo de fruto, nivel de precisión y número de árboles.\n2. Presione \'Aceptar\' para iniciar.\n3. Seleccione árboles aleatoriamente del cultivo.\n\nDurante el proceso:\n- Verá la imagen de la cámara.\n- Use \'Siguiente\', \'Anterior\' o \'Cancelar\'.\n\nResultados mostrados:\n- Árboles y frutos detectados.\n- Promedio por árbol y estimación total.\n\nFinalice con \'Aceptar\' (guardar) o \'Cancelar\' (descartar).</string>
+    <string name="descripcion_menu_principal">\n• Menú principal:\nDesde el menú podrá acceder a las funciones principales de la app.</string>
+</resources>

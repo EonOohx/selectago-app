@@ -1,19 +1,59 @@
 <resources>
     <string name="app_name">SelectagoApp</string>
 
-    <string name="instrucciones_uso">Instrucciones de uso de Selectago app:
-Para usar esta aplicación es necesario que cuente con un dispositivo con cámara.
-En el menú de opciones podrá ver las funciones principales de la aplicación.
-En la opción "Tomar muestras" podrá realizar un muestreo de sus frutos utilizando la cámara del dispositivo.
-Al seleccionar esa opción, se le pedirán algunos datos necesarios para realizar el muestreo, como el tipo de fruto que va a contar, qué tan preciso desea que sea el análisis y la cantidad de árboles en total que tiene en sus cultivos, una vez ingresados los datos debe presionar el botón aceptar para iniciar el análisis y detección.
-El sistema calculará de manera automática la cantidad necesaria de árboles para hacer el muestreo, y usted deberá escoger esa cantidad de árboles entre su cultivo de forma aleatoria y procurando utilizar árboles de cada área de su cultivo para tener resultados más precisos.
-En la parte superior se le indicará la cantidad de árboles que se van a detectar, y en la parte central de la pantalla podrá ver la imagen de la cámara. Para tomar una fotografía del árbol y detectar los frutos en él deberá presionar el botón "Siguiente", si quiere volver a hacer la fotografía anterior puede usar el botón "Anterio", en cambio, si desea cancelar el proceso y regresar a la pantalla del menú principal puede usar el botón "Cancelar".
-Una vez que todos los árboles han sido fotografiados, la aplicación mostrará los resultados en la pantalla indicando el número total de árboles del cultivo, la cantidad de árboles detectados, la cantidad de frutos detectados, el promedio de frutos por cada árbol y al final la cantidad aproximada de frutos en total del cultivo.
-El botón "Aceptar" guardará esos datos y regresará al menú principal, y el botón "Cancelar" volverá al menú principal sin guardar los datos.
-En la opción de "Consultar datos" usted podrá consultar los registros de detecciones realizadas anteriormente, seleccionando el tipo de frutos y el intervalo de fechas que desea consultar, una vez seleccionados debe presionar el botón "Consultar" para realizar la consulta y en la parte inferior se mostrará una gráfica que muestra la cantidad de frutos detectados en función del tiempo, y después una lista con los registros existentes, en la cual podrá arrastrar un registro hacia la izquierda para eliminarlo.
-En la opción de "Realizar estimación" usted podrá realizar una estimación de los recursos necesarios para la recolección de sus frutos. Deberá ingresar el tipo de fruto y el precio de venta por tonelada para poder estimar el valor de su producción, además de los días límite que tiene para cosechar dichos frutos, esto servirá para indicarle la cantidad de mano de obra que necesita para cumplir con el plazo establecido.
-Una vez ingresados los datos y presionado el botón "Aceptar" se le mostrarán los siguientes datos: Tipo de fruto (El tipo de frutos qur tiene en su cosecha), Estimación de producción (Cantidad aproximada de frutos en su cosecha), Valor de producción (Precio al que podrá vender dichos frutos), Recolectores necesarios (Mano de obra necesaria para recolectar los frutos a tiempo), Número de costales(Cantidad de costales necesarios para almacenar los frutos) y Número de transportes (Medios de transporte necesarios para transportar los frutos que venderá). El botón "Aceptar" lo regresará al menú principal.
+    <string name="instrucciones_uso">
+Instrucciones de uso de la app Selectago:
+
+• Requisitos:
+Para usar esta aplicación necesita un dispositivo con cámara.
+
+• Menú principal:
+Desde el menú podrá acceder a las funciones principales de la app.
+
+• Tomar muestras:
+Permite contar frutos usando la cámara. Al seleccionar esta opción deberá:
+1. Ingresar el tipo de fruto, el nivel de precisión y la cantidad total de árboles.
+2. Presionar "Aceptar" para iniciar el análisis.
+3. El sistema calculará automáticamente cuántos árboles debe muestrear.
+4. Seleccione esa cantidad de árboles de manera aleatoria, procurando abarcar diferentes áreas del cultivo.
+
+Durante el muestreo:
+- Verá la imagen de la cámara en pantalla.
+- Use "Siguiente" para tomar una nueva foto.
+- Use "Anterior" para repetir la última foto.
+- Use "Cancelar" para detener el proceso y volver al menú.
+
+Al finalizar:
+Se mostrarán resultados como:
+- Total de árboles del cultivo.
+- Árboles detectados.
+- Frutos detectados.
+- Promedio de frutos por árbol.
+- Estimación total de frutos.
+
+Presione "Aceptar" para guardar o "Cancelar" para descartar.
+
+• Consultar datos:
+Puede consultar registros anteriores.
+1. Seleccione tipo de fruto e intervalo de fechas.
+2. Presione "Consultar".
+3. Se mostrará una gráfica con la evolución de frutos detectados y una lista de registros.
+Puede eliminar un registro deslizando hacia la izquierda.
+
+• Realizar estimación:
+Estime los recursos para la cosecha:
+1. Ingrese tipo de fruto, precio por tonelada y días límite para cosechar.
+2. Presione "Aceptar" para obtener:
+   - Tipo de fruto.
+   - Estimación de producción.
+   - Valor de producción.
+   - Recolectores necesarios.
+   - Número de costales.
+   - Número de transportes.
+
+Use "Aceptar" para volver al menú principal.
 </string>
+
 
     <string name="alt_bottom_sheet_chevron">Bottom sheet expandable indicator</string>
 
@@ -44,6 +84,11 @@ Una vez ingresados los datos y presionado el botón "Aceptar" se le mostrarán l
     <string name="ver_mas">Ver mas</string>
     <string name="ayuda">Ayuda</string>
     <string name="nosotros">Nosotros</string>
+    <string name="descripcion_consultar_datos">\n• Consultar datos:\n1. Seleccione tipo de fruto e intervalo de fechas.\n2. Presione \'Consultar\'.\n3. Verá una gráfica y una lista de registros.\nPuede eliminar registros deslizando hacia la izquierda.</string>
+    <string name="descripcion_realizar_estimacion">\n• Realizar estimación:\n1. Ingrese tipo de fruto, precio por tonelada y días para cosechar.\n2. Presione \'Aceptar\' para ver:\n- Tipo de fruto\n- Producción estimada\n- Valor de producción\n- Mano de obra necesaria\n- Costales y transportes requeridos\n\nPresione \'Aceptar\' para volver al menú.</string>
+    <string name="descripcion_tomar_muestras">\n• Tomar muestras:\n1. Ingrese el tipo de fruto, nivel de precisión y número de árboles.\n2. Presione \'Aceptar\' para iniciar.\n3. Seleccione árboles aleatoriamente del cultivo.\n\nDurante el proceso:\n- Verá la imagen de la cámara.\n- Use \'Siguiente\', \'Anterior\' o \'Cancelar\'.\n\nResultados mostrados:\n- Árboles y frutos detectados.\n- Promedio por árbol y estimación total.\n\nFinalice con \'Aceptar\' (guardar) o \'Cancelar\' (descartar).</string>
+    <string name="descripcion_menu_principal">\n• Menú principal:\nDesde el menú podrá acceder a las funciones principales de la app.</string>
+    <string name="descripcion_requisitos">• Requisitos:\nPara usar esta aplicación necesita un dispositivo con cámara.</string>
 
     <string-array name="delegate_spinner_titles">
         <item>CPU</item>

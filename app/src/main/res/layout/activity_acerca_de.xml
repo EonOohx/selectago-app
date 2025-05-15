@@ -129,28 +129,6 @@
             <!--android:onClick="fnInstagram" -->
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        >
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@drawable/telefono"
-            android:layout_marginLeft="20dp"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="9614691395"
-            android:textSize="18sp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="30dp"
-            />
-    </LinearLayout>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
