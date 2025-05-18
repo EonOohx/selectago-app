@@ -29,7 +29,7 @@ La aplicación permite escanear frutas como mango, rambután y limón para evalu
 | Monetización                     | Google AdMob 22.2.0                                            |
 | Entrenamiento del modelo IA      | Python 3.10, TensorFlow 2.13, Roboflow   
 
-## Reconocimiento
+## 🏅 Reconocimiento
 El proyecto fue presentado en la competencia de innovación tecnológica INNOVATEC 2023 en el Instituo Tecnológico de Tuxtla Gutiérrez, consiguiendo el primer lugar en la categoría agroalimentaria durante la fase local.
 </br>
 <p align="center">
